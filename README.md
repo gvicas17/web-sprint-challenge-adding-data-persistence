@@ -8,11 +8,11 @@ This is an individual assessment. All work must be your own. Your challenge scor
 
 ## Project Set Up
 
-- [ ] Create a forked copy of this project.
-- [ ] Clone your OWN version of the repository. (Not Lambda's by mistake!)
-- [ ] Implement the project in a new branch: `git checkout -b <firstName-lastName>`.
-- [ ] Create and push commits regularly: `git push origin <firstName-lastName>`.
-
+- [x] Create a forked copy of this project.
+- [x] Clone your OWN version of the repository. (Not Lambda's by mistake!)
+- [x] Implement the project in a new branch: `git checkout -b <firstName-lastName>`.
+- [x] Create and push commits regularly: `git push origin <firstName-lastName>`.
+Testing to see if codegrade works
 ## Project Instructions
 
 ### Introduction
