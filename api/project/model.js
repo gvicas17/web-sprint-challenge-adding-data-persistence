@@ -2,8 +2,9 @@
 const db = require('../../data/dbConfig')
 
 module.exports = {
-   findAll
+   findAll,
 }
+
 
 function findAll(){
     return db('projects')

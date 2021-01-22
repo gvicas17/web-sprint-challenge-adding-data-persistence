@@ -9,11 +9,21 @@ router.get('/', (req, res) => {
     .then(projects => {
       res.status(200).json(projects);
     })
-    .catch(error => {
+    .catch(() => {
       res.status(500).json ({message: 'could not find projects'})
     });
 })
 
+router.post('/', (req, res) => {
+    const projectData = req.body;
+Project.add(projectData)
+    .then(project => {
+      res.status(201).json(project);
+    })
+    .catch(err => {
+      res.status(500).json({ message: 'Failed to create new project' });
+    });
+});
 
 
 module.exports = router
