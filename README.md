@@ -53,11 +53,11 @@ Your finished project must meet all of the following requirements:
 - [x] Design the data model and use knex migrations to create the database and tables.
 - [x] Build an API inside the `api` folder with endpoints for:
 
-  - [x] `[POST] /api/resources`
+  <!-- - [x] `[POST] /api/resources`
     - Example of response body: `{"resource_id":1,"resource_name":"foo","resource_description":null}`
 
   - [x] `[GET] /api/resources`
-    - Example of response body: `[{"resource_id":1,"resource_name":"foo","resource_description":null}]`
+    - Example of response body: `[{"resource_id":1,"resource_name":"foo","resource_description":null}]` -->
 
   - [x] `[POST] /api/projects`
     - Even though `project_completed` is stored as an integer, the API uses booleans when interacting with the client
