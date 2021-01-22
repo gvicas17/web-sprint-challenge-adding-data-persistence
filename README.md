@@ -12,7 +12,7 @@ This is an individual assessment. All work must be your own. Your challenge scor
 - [x] Clone your OWN version of the repository. (Not Lambda's by mistake!)
 - [x] Implement the project in a new branch: `git checkout -b <firstName-lastName>`.
 - [x] Create and push commits regularly: `git push origin <firstName-lastName>`.
-Testing to see if codegrade works
+
 ## Project Instructions
 
 ### Introduction
