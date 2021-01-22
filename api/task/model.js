@@ -11,10 +11,14 @@ function findAll(){
     return db('tasks')
 }
 
-function add(tasksData){
+function add(taskData){
     return db('tasks')
-    .insert(tasksData)
-    .then(ids => {
-        return (ids[0])
+    .insert(taskData)
+    .then(newTask => {
+        return db('tasks')
+        .where('task_id', newTask[0])
+        .then(selectedTask => {
+            return (selectedTask)
+        })
     })
 }

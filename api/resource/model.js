@@ -1,6 +1,5 @@
 // build your `Resource` model here
 
-const { where } = require('../../data/dbConfig')
 const db = require('../../data/dbConfig')
 
 module.exports = {

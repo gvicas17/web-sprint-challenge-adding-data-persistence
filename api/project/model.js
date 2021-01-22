@@ -10,10 +10,14 @@ function findAll(){
     return db('projects')
 }
 
-function add(projectsData){
+function add(projectData){
     return db('projects')
-    .insert(projectsData)
-    .then(ids => {
-        return (ids[0])
+    .insert(projectData)
+    .then(newProject => {
+        return db('projects')
+        .where('project_id', newProject[0])
+        .then(selectedProject => {
+            return (selectedProject)
+        })
     })
 }
