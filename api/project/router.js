@@ -16,4 +16,14 @@ router.get('/', (req, res) => {
     })
 })
 
+router.post('/', (req, res) => {
+    const projectData = req.body
+    Project.add(projectData)
+    .then(project => {
+        res.status(201).json(project)
+    })
+    .catch(() => {
+        res.status(500).json({message: 'failed to add project'})
+    })
+})
 module.exports = router
