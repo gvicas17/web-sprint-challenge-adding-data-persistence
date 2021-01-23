@@ -7,7 +7,7 @@ const Resource = require('./model')
 
 router.get('/', (req, res) => {
     
-    Resource.findAll()
+    Resource.findAllResources()
     .then(resources => {
         res.status(200).json(resources)
     })

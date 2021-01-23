@@ -5,9 +5,12 @@ const router = express.Router()
 
 const Task = require('./model')
 
+
+
+
 router.get('/', (req, res) => {
-    
-    Task.findAll()
+
+    Task.findAllTasks(req.query)
     .then(tasks => {
         res.status(200).json(tasks)
     })

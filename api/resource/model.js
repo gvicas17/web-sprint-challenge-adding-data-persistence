@@ -3,11 +3,11 @@
 const db = require('../../data/dbConfig')
 
 module.exports = {
-    findAll,
+    findAllResources,
     add
 }
 
-function findAll(){
+function findAllResources(){
     return db('resources')
 }
 

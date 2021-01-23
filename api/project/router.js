@@ -7,7 +7,7 @@ const Project = require('./model')
 
 router.get('/', (req, res) => {
     
-    Project.findAll()
+    Project.findAllProjects()
     .then(projects => {
         res.status(200).json(projects)
     })
