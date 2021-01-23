@@ -4,21 +4,21 @@ exports.up = function(knex) {
     .createTable('projects', tbl => {
         tbl.increments('project_id')
         tbl.string('project_name', 128).notNullable()
-        tbl.text('project_description')
-        tbl.boolean('project_completed').notNullable()
+        tbl.string('project_description', 1000)
+        tbl.boolean('project_completed').default(false)
     })
   
     .createTable('resources', tbl => {
         tbl.increments('resource_id')
-        tbl.string('resource_name').notNullable().unique()
+        tbl.string('resource_name', 128).notNullable().unique()
         tbl.text('resource_description')
     })
   
     .createTable('tasks', tbl => {
         tbl.increments('task_id')
-        tbl.text('task_description').notNullable
-        tbl.text('task_notes')
-        tbl.boolean('task_completed').notNullable()
+        tbl.string('task_description', 128).notNullable()
+        tbl.string('task_notes', 128)
+        tbl.boolean('task_completed').default(false)
         tbl.integer('project_id')
           .unsigned()
           .notNullable()
@@ -29,7 +29,7 @@ exports.up = function(knex) {
   
     .createTable('project_resources', tbl => {
         tbl.increments('project_resources_id')
-        tbl.string('category')
+        tbl.string('category', 128)
         tbl.integer('project_id')
         .unsigned()
           .notNullable()

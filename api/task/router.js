@@ -20,7 +20,7 @@ router.post('/', (req, res) => {
     const taskData = req.body
     Task.add(taskData)
     .then(task => {
-        res.status(201).json(task)
+        res.status(201).json(task[0])
     })
     .catch(() => {
         res.status(500).json({message: 'failed to add tasks'})
